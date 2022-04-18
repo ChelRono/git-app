@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GithubServiceService } from '../github-service.service';
-import { RepositoryComponent} from '../repository/repository.component';
+import { GithubServiceService } from '../git.service';
 import { RepoArray } from '../user';
 
 

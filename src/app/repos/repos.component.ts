@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
-import { GithubServiceService } from '../github-service.service';
+import { GitService } from '../git.service';
 import { UserComponent} from '../user/user.component';
 
 @Component({
@@ -7,10 +7,10 @@ import { UserComponent} from '../user/user.component';
   templateUrl: './repos.component.html',
   styleUrls: ['./repos.component.css']
 })
-  export class RepositoryComponent implements OnInit {
+  export class ReposComponent implements OnInit {
 
-  	@Input() passData;
-	          arrayData;
+  	@Input() passData: any;
+	          arrayData: any;
 
  constructor() {
  }
