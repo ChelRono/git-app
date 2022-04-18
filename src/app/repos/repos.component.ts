@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
+import { GithubServiceService } from '../github-service.service';
+import { UserComponent} from '../user/user.component';
 
 @Component({
-  selector: 'app-repos',
-  templateUrl: './repos.component.html',
-  styleUrls: ['./repos.component.css']
+  selector: 'app-repository',
+  templateUrl: './repository.component.html',
+  styleUrls: ['./repository.component.css']
 })
-export class ReposComponent implements OnInit {
+  export class RepositoryComponent implements OnInit {
 
-  constructor() { }
+  	@Input() passData;
+	          arrayData;
 
-  ngOnInit(): void {
+ constructor() {
+ }
+
+  ngOnInit() {
   }
 
+ ngOnChanges(changes: SimpleChanges) {
+    if (changes['passData']) {
+		this.arrayData = this.passData;
+	}
+  }
 }
