@@ -3,9 +3,9 @@ import { GithubServiceService } from '../github-service.service';
 import { UserComponent} from '../user/user.component';
 
 @Component({
-  selector: 'app-repository',
-  templateUrl: './repository.component.html',
-  styleUrls: ['./repository.component.css']
+  selector: 'app-repos',
+  templateUrl: './repos.component.html',
+  styleUrls: ['./repos.component.css']
 })
   export class RepositoryComponent implements OnInit {
 

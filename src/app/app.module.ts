@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { OrganisationComponent } from './organisation/organisation.component';
-import { RepositoryComponent } from './repository/repository.component';
+import { ReposComponent } from './repos/repos.component';
 import { TruncatePipe } from './truncate.pipe';
 import { ReposComponent } from './repos/repos.component';
 
@@ -19,7 +19,7 @@ import { ReposComponent } from './repos/repos.component';
     UserComponent,
     DashboardComponent,
     OrganisationComponent,
-    RepositoryComponent,
+    ReposComponent,
     TruncatePipe,
     ReposComponent,
   ],
