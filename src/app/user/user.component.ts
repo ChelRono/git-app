@@ -16,7 +16,7 @@ export class UserComponent implements OnInit {
   noInput:boolean = true;
   getFetchSuccess:boolean = false;
   NoUser:boolean = false;
-  repoArrays!: RepoArray[];
+  repoArrays: RepoArray[] | undefined;
 
   constructor(private _gitService: GitService) { }
 
@@ -46,7 +46,7 @@ export class UserComponent implements OnInit {
   }
 
   fetchUser(UserName: string): void {
-    this._gitService.getRepos(UserName).subscribe( (data: RepoArray[]) => {
+    this._gitService.getRepos(UserName).subscribe( data => {
 		this.repoArrays = data;
 		 if (this.repoArrays == undefined || this.repoArrays && this.repoArrays.length == 0) {
 			 this.NoUser = true;
@@ -57,9 +57,10 @@ export class UserComponent implements OnInit {
 
     setTimeout(() =>{
        this.isLoading = false;
-       this.getFetchSuccess = true});
-    // },bind(this),1000);
+       this.getFetchSuccess = true;
+    });
   }
+
 
 
 }

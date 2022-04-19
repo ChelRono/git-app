@@ -5,13 +5,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserComponent } from './user/user.component';
 
 
-
 const routes: Routes = [
   { path: '', pathMatch:'full', redirectTo: '/' },
-
-  { path: 'user', component: UserComponent }
-
-];
+  { path: 'user', component: UserComponent },
+]
 
 
 @NgModule({

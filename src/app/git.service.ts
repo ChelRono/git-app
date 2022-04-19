@@ -29,13 +29,7 @@ export class GitService {
       );
   }
 
-  // getOrgaRepos(userName: string): Observable<RepoArray[]> {
-  //   const url = `${this.configUrl}/orgs/${userName}/repos`;
-  //   return this.http.get<RepoArray[]>(url)
-  //   .pipe(
-  //     catchError(this.handleError('fetch orgs', []))
-  //   );
-  // }
+ 
 
   private handleError<T> (operation = 'operation', result?: T) {
   return (error: any): Observable<T> => {
