@@ -1,4 +1,6 @@
 # GitAp
+This project is about github searc.The user is able to search for any repository in github
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
@@ -58,7 +60,7 @@ If you find a bug (the website couldn't handle the query and or gave undesired r
 If you'd like to request a new function, feel free to do so by opening an issue here. Please include sample queries and their corresponding results.
 
 
-##### Link to Live Site : [chelrono.github.io/cafe-pizza/](https://github.com/ChelRono/Cafe-pizza.git)
+##### Link to Live Site : [https://github.com/ChelRono/git-app/](https://github.com/ChelRono/git-app)
 
 ### License
 
