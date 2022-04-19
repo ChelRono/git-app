@@ -18,7 +18,7 @@ export class GitService {
 
   constructor(private http: HttpClient) { }
 
-  configUrl = 'https://api.github.com';
+  configUrl ='https://github.com/settings/tokens';
 
 
   getRepos(userName: string): Observable<RepoArray[]> {
