@@ -57,10 +57,9 @@ export class UserComponent implements OnInit {
 
     setTimeout(() =>{
        this.isLoading = false;
-       this.getFetchSuccess = true;
-    },bind(this),1000);
+       this.getFetchSuccess = true});
+    // },bind(this),1000);
   }
-
 
 
 }
