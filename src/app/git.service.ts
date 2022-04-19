@@ -14,7 +14,7 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class GithubServiceService {
+export class GitService {
 
   constructor(private http: HttpClient) { }
 
@@ -29,13 +29,13 @@ export class GithubServiceService {
       );
   }
 
-  getOrgaRepos(userName: string): Observable<RepoArray[]> {
-    const url = `${this.configUrl}/orgs/${userName}/repos`;
-    return this.http.get<RepoArray[]>(url)
-    .pipe(
-      catchError(this.handleError('fetch orgs', []))
-    );
-  }
+  // getOrgaRepos(userName: string): Observable<RepoArray[]> {
+  //   const url = `${this.configUrl}/orgs/${userName}/repos`;
+  //   return this.http.get<RepoArray[]>(url)
+  //   .pipe(
+  //     catchError(this.handleError('fetch orgs', []))
+  //   );
+  // }
 
   private handleError<T> (operation = 'operation', result?: T) {
   return (error: any): Observable<T> => {

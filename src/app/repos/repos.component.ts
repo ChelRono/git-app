@@ -1,6 +1,4 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
-import { GitService } from '../git.service';
-import { UserComponent} from '../user/user.component';
 
 @Component({
   selector: 'app-repos',
@@ -9,7 +7,7 @@ import { UserComponent} from '../user/user.component';
 })
   export class ReposComponent implements OnInit {
 
-  	@Input() passData: any;
+  	@Input() passData: any
 	          arrayData: any;
 
  constructor() {

@@ -38,7 +38,7 @@
       <h5 *ngIf="getFetchSuccess">Search Results For {{values}}</h5>
   </div>
   
-  <app-repository *ngIf="getFetchSuccess" [passData]="repoArrays"></app-repository>
+  <app-repos *ngIf="getFetchSuccess" [passData]="repoArrays"></app-repos>
   
   <div class="container" *ngIf="NoUser && getFetchSuccess">
   <div class="card text-center">
