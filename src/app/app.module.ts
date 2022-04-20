@@ -9,6 +9,7 @@ import { UserComponent } from './user/user.component';
 import { ReposComponent } from './repos/repos.component';
 import { TruncatePipe } from './truncate.pipe';
 import { OrgComponent } from './org/org.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { OrgComponent } from './org/org.component';
     ReposComponent,
     TruncatePipe,
     OrgComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
