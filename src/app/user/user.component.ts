@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GitService } from '../git.service';
+// import { ReposComponent} from '../repos/repos.component';
 import { RepoArray } from '../user';
 
 
@@ -55,10 +56,10 @@ export class UserComponent implements OnInit {
 	   };
 	});
 
-    setTimeout(() =>{
+    setTimeout(function(){
        this.isLoading = false;
        this.getFetchSuccess = true;
-    });
+    }.bind(this),1000);
   }
 
 

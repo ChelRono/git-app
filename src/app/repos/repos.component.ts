@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-repos',
@@ -16,9 +16,9 @@ import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
   ngOnInit() {
   }
 
- ngOnChanges(changes: SimpleChanges) {
-    if (changes['passData']) {
-		this.arrayData = this.passData;
-	}
-  }
+//  ngOnChanges(changes: SimpleChanges) {
+//     if (changes['passData']) {
+// 		this.arrayData = this.passData;
+// 	}
+//   }
 }

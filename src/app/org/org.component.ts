@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { GitService } from '../git.service';
-import { ReposComponent} from '../repos/repos.component';
+// import { ReposComponent} from '../repos/repos.component';
 import { RepoArray } from '../user';
 
 @Component({
-  selector: 'app-orga',
+  selector: 'app-org',
   templateUrl: './org.component.html',
   styleUrls: ['./org.component.css']
 })
@@ -16,7 +16,7 @@ export class OrgComponent implements OnInit {
   noInput:boolean = true;
   getFetchSuccess:boolean = false;
   NoOrgs:boolean = false;
-  repoArrays: RepoArray[];
+  repoArrays: RepoArray[] | undefined;
 
   constructor(private _gitService: GitService) { }
 
@@ -24,7 +24,7 @@ export class OrgComponent implements OnInit {
   }
 
 
-  onKey(event: any) { // without type info
+  onKey(event: any) { 
     this.values = event.target.value;
     this.getFetchSuccess = false;
     this.NoOrgs = false;
@@ -40,13 +40,13 @@ export class OrgComponent implements OnInit {
     this.NoOrgs = false;
     userName = this.values.trim();
     if (!userName) { return; }
-    this._gitService.getOrgaRepos(userName) 
+    this._gitService['getOrgRepos'](userName) 
     this.isLoading = true;
     this.fetchOrgs(userName);
   }
 
-  fetchOrgs(UserName): void {
-    this._gitService.getOrgaRepos(UserName).subscribe( data => {
+  fetchOrgs(UserName: string): void {
+    this._gitService['getOrgRepos'](UserName).subscribe( (data: RepoArray[]) => {
 		this.repoArrays = data;
     if (this.repoArrays == undefined || this.repoArrays && this.repoArrays.length == 0) {
        this.NoOrgs = true;
