@@ -7,9 +7,9 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { RepoArray } from './user';
 
 
-const httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
+// const httpOptions = {
+//     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+// };
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ export class GitService {
 
   constructor(private http: HttpClient) { }
 
-  configUrl ='https://github.com/settings/tokens';
+  configUrl ='https://api.github.com/users/';
 
 
   getRepos(userName: string): Observable<RepoArray[]> {

@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { ReposComponent } from './repos/repos.component';
 import { TruncatePipe } from './truncate.pipe';
+import { OrgComponent } from './org/org.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { TruncatePipe } from './truncate.pipe';
     UserComponent,
     ReposComponent,
     TruncatePipe,
+    OrgComponent,
   ],
   imports: [
     BrowserModule,
