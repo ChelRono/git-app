@@ -17,14 +17,16 @@ import { RepoArray } from './user';
 export class GitService {
   [x: string]: any;
 
+  username= "ChelRono"
+
   constructor(private http: HttpClient) { }
 
-  configUrl ='https://api.github.com/users/repos/';
+  configUrl=`https://api.github.com/users/${this.username}/repos`
 
 
-  getRepos(userName: string): Observable<RepoArray[]> {
-    const url = `${this.configUrl}/users/${userName}/repos`
-    return this.http.get<RepoArray[]>(url)
+  getRepos():Observable<RepoArray[]> {
+    // const url = `${this.configUrl}/users/${userName}/repos`
+    return this.http.get<RepoArray[]>(this.configUrl)
     .pipe(
         catchError(this.handleError('fetch users', []))
       );
@@ -46,4 +48,7 @@ export class GitService {
   };
 }
  
+upadateUser(userName:string){
+    this.username =  userName
+}
 }

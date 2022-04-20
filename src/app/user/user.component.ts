@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { GitService } from '../git.service';
 // import { ReposComponent} from '../repos/repos.component';
 import { RepoArray } from '../user';
@@ -18,10 +19,11 @@ export class UserComponent implements OnInit {
   getFetchSuccess:boolean = false;
   NoUser:boolean = false;
   repoArrays: RepoArray[] | undefined;
-
+  username:string 
   constructor(private _gitService: GitService) { }
 
   ngOnInit() {
+    this.fetchUser()
   }
 
 
@@ -41,13 +43,15 @@ export class UserComponent implements OnInit {
   	this.NoUser = false;
     userName = this.values.trim();
     if (!userName) { return; }
-    this._gitService.getRepos(userName) 
+    // this._gitService.getRepos(userName) 
     this.isLoading = true;
-    this.fetchUser(userName);
+    // this.fetchUser(userName);
   }
 
-  fetchUser(UserName: string): void {
-    this._gitService.getRepos(UserName).subscribe( data => {
+  fetchUser():void {
+    this._gitService.getRepos().subscribe( (data:any) => {
+      console.log(data);
+      
 		this.repoArrays = data;
 		 if (this.repoArrays == undefined || this.repoArrays && this.repoArrays.length == 0) {
 			 this.NoUser = true;
@@ -62,6 +66,8 @@ export class UserComponent implements OnInit {
     }.bind(this),1000);
   }
 
-
+onSearch(form: NgForm){
+    this.username = form.value.userdes
+}
 
 }
