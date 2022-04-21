@@ -1,6 +1,6 @@
 export class RepoArray {
   id!: number;
-  name!: string;
+  name!: any;
   size!: number;
   language: any;
   description!: string;

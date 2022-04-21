@@ -1,24 +1,24 @@
-import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
+// import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 
-@Component({
-  selector: 'app-repos',
-  templateUrl: './repos.component.html',
-  styleUrls: ['./repos.component.css']
-})
-  export class ReposComponent implements OnInit {
+// @Component({
+//   selector: 'app-repos',
+//   templateUrl: './repos.component.html',
+//   styleUrls: ['./repos.component.css']
+// })
+//   export class ReposComponent implements OnInit {
 
-  	@Input() passData: any
-	          arrayData: any;
+//   	@Input() passData: any
+// 	          arrayData: any;
 
- constructor() {
- }
+//  constructor() {
+//  }
 
-  ngOnInit() {
-  }
+//   ngOnInit() {
+//   }
 
- ngOnChanges(changes: SimpleChanges) {
-    if (changes['passData']) {
-		this.arrayData = this.passData;
-	}
-  }
-}
+//  ngOnChanges(changes: SimpleChanges) {
+//     if (changes['passData']) {
+// 		this.arrayData = this.passData;
+// 	}
+//   }
+// }
